@@ -6,9 +6,13 @@ autopep8
     :target: https://pypi.org/project/autopep8/
     :alt: PyPI Version
 
-.. image:: https://travis-ci.org/hhatto/autopep8.svg?branch=master
-    :target: https://travis-ci.org/hhatto/autopep8
+.. image:: https://github.com/hhatto/autopep8/workflows/Python%20package/badge.svg
+    :target: https://github.com/hhatto/autopep8/actions
     :alt: Build status
+
+.. image:: https://codecov.io/gh/hhatto/autopep8/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/hhatto/autopep8
+    :alt: Code Coverage
 
 autopep8 automatically formats Python code to conform to the `PEP 8`_ style
 guide. It uses the pycodestyle_ utility to determine what parts of the code
@@ -371,7 +375,7 @@ configuration file example::
 
     [tool.autopep8]
     max_line_length = 120
-    ignore = E501
+    ignore = "E501,W6"  # or ["E501", "W6"]
 
 
 Testing
